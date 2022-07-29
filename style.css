@@ -1,0 +1,117 @@
+:root {
+    --bg-color-dark: #1C1C1C;
+    --main-button-color-dark: #003E52;
+    --title-dark: #F2F2F2;
+    --button-hover-dark: #00C4BA;
+
+    --bg-color-light: #F2F2F2;
+    --main-button-color-light: #00C4BA;
+    --title-light: #1C1C1C;
+    --button-hover-light: #003E52;
+
+
+    --bg-color: var(--bg-color-dark);
+    --main-button-color: var(--main-button-color-dark); /*Define tema padrão escuro ao carregar a pagina*/
+    --title: var(--title-dark);
+    --button-hover: var(--button-hover-dark);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font: normal 1.4rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+#theme-switch {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.theme-button {
+    cursor: pointer;
+    border: none;
+    font-size: 3rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: #333333;
+    color: #F2F2F2;
+}
+
+.theme-button-active {
+    transform: scale(1.1);
+    background-color: #F2F2F2;
+    color: #1C1C1C;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    color: var(--title);
+    font-size: 3rem;
+    letter-spacing: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+#slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    
+}
+
+#slider {
+    border: 5px solid var(--main-button-color);
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 10px var(--main-button-color);
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.button {
+    cursor: pointer;
+    height: 100%;
+    border: none;
+    background-color: var(--main-button-color);
+    color: white;
+    width: 3rem;
+    transition: all 0.1s;
+    box-shadow: 0px 0px 10px var(--main-button-color);
+}
+
+.button:nth-child(1){
+    border-radius: 25% 0 0 25%;
+}
+
+.button:nth-child(3){
+    border-radius: 0 25% 25% 0;
+}
+
+.button:hover {
+    transform: scaleX(1.05);
+    background-color: var(--button-hover);
+    box-shadow: 0px 0px 20px var(--title);
+}
+
+.active {
+    display: block;
+}
+
